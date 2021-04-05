@@ -13,7 +13,8 @@ public class ThingTest {
         RTree<String, Point> tree = RTree.<String, Point>create() //
                 .add("fred", Geometries.point(5, 10)) //
                 .add("john", Geometries.point(5, 10)) //
-                .add("lily",Geometries.point(-3, 8));
+                .add("lily",Geometries.point(100000000, 8))
+                .delete("fred", Geometries.point(5, 10));
         tree.entries().forEach(System.out::println);
     }
 
