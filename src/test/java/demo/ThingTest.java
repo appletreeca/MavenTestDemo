@@ -12,7 +12,8 @@ public class ThingTest {
     public void testUseRtree() {
         RTree<String, Point> tree = RTree.<String, Point>create() //
                 .add("fred", Geometries.point(5, 10)) //
-                .add("john", Geometries.point(5, 10));
+                .add("john", Geometries.point(5, 10)) //
+                .add("lily",Geometries.point(-3, 8));
         tree.entries().forEach(System.out::println);
     }
 
